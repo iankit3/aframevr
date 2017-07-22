@@ -13136,24 +13136,13 @@ var _aframeReact = __webpack_require__(103);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-/**
- * <Entity
-                geometry={{primitive: 'box', width: 50 , height: 50}}
-                material={{color: "red", roughness: 0.5, src: img}}
-                scale={{x: 2, y: 2, z: 2}}
-                position={{x: 0, y: 0, z: -5}}/>
-
- */
-
-var img = "http://www.roadtovr.com/wp-content/uploads/2014/09/Venice.Still001.jpeg";
-var img2 = "http://www.paris-360.com/pictures/louvre_pyramide_ficheok.jpg";
 var App = function App(_ref) {
     var dispatch = _ref.dispatch,
         selectedImg = _ref.selectedImg,
         data = _ref.data;
 
     var handleClick = function handleClick(url) {
-        dispatch((0, _actions.addTodo)(url));
+        dispatch((0, _actions.setSelected)(url));
     };
     return _react2.default.createElement(
         'div',
@@ -13161,10 +13150,7 @@ var App = function App(_ref) {
         _react2.default.createElement(
             _aframeReact.Scene,
             null,
-            _react2.default.createElement(_aframeReact.Entity, { primitive: 'a-sky', src: selectedImg }),
-            _react2.default.createElement(_aframeReact.Entity, { events: {
-                    click: handleClick
-                }, text: { value: 'Hello, WebVR!' } })
+            _react2.default.createElement(_aframeReact.Entity, { primitive: 'a-sky', src: selectedImg })
         ),
         _react2.default.createElement(
             'div',
@@ -94266,7 +94252,7 @@ module.exports = getWakeLock();
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-var addTodo = exports.addTodo = function addTodo(text) {
+var setSelected = exports.setSelected = function setSelected(text) {
     return {
         type: 'SELECT',
         text: text

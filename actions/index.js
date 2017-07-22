@@ -1,4 +1,4 @@
-export const addTodo = (text) => ({
+export const setSelected = (text) => ({
     type: 'SELECT',
     text
 })
