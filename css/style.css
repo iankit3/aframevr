@@ -29,6 +29,9 @@ a-scene{
     height: 60px;
 }
 
-.gallery div{
-   position: absolute;
+.gallery .img-div div{
+  background: #eee;
+    font-family: sans-serif;
+    color: #2e2e2e;
+    font-size: 15px;
 }
